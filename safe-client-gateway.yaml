@@ -2,6 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: safe-client-gateway
+  namespace: safe-tests
 spec:
   project: safe-project
   source:
