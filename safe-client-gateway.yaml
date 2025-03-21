@@ -1,0 +1,13 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: safe-client-gateway
+spec:
+  project: safe-project
+  source:
+    chart: safe-client-gateway
+    repoURL: 550091799133.dkr.ecr.eu-central-1.amazonaws.com  # note: the oci:// syntax is not included.
+    targetRevision: 0.1.0
+  destination:
+    name: "in-cluster"
+    namespace: safe-tests
